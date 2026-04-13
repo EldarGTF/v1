@@ -4,20 +4,20 @@ import SectionTitle from '../components/SectionTitle';
 const orders = [
   {
     id: 1,
-    serviceType: 'Windows installation',
-    description: 'Need to install 3 energy-efficient windows in apartment.',
-    address: 'Almaty, Abay 25',
+    serviceType: 'Установка окон',
+    description: 'Нужно установить 3 энергосберегающих окна в квартире.',
+    address: 'Алматы, Абая 25',
     budget: 240000,
-    status: 'searching',
+    status: 'Поиск мастера',
     bids: 4
   },
   {
     id: 2,
-    serviceType: 'Balcony finishing',
-    description: 'Insulation and interior finishing for balcony.',
-    address: 'Astana, Turan 14',
+    serviceType: 'Отделка балкона',
+    description: 'Утепление и внутренняя отделка балкона.',
+    address: 'Астана, Туран 14',
     budget: 310000,
-    status: 'in progress',
+    status: 'В работе',
     bids: 6
   }
 ];
@@ -25,7 +25,7 @@ const orders = [
 function OrdersPage() {
   return (
     <section>
-      <SectionTitle title="Orders marketplace" subtitle="Compare offers from installers" />
+      <SectionTitle title="Биржа заказов" subtitle="Сравните предложения от мастеров" />
       <div className="grid gap-4">
         {orders.map((order) => (
           <OrderCard key={order.id} order={order} />

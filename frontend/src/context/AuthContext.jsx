@@ -5,7 +5,7 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
   const [user, setUser] = useState({
     id: 1,
-    fullName: 'Aruzhan User',
+    fullName: 'Аружан Пользователь',
     role: 'client',
     token: 'demo-jwt-token'
   });

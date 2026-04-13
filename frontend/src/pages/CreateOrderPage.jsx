@@ -3,7 +3,7 @@ import SectionTitle from '../components/SectionTitle';
 
 function CreateOrderPage() {
   const [form, setForm] = useState({
-    serviceType: 'Windows',
+    serviceType: 'Окна',
     description: '',
     address: '',
     budget: ''
@@ -13,24 +13,24 @@ function CreateOrderPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Order created (mock). Connect API POST /orders to persist.');
+    alert('Заказ создан (демо). Подключите API POST /orders для сохранения.');
   };
 
   return (
     <section className="mx-auto max-w-2xl rounded-xl border bg-white p-6">
-      <SectionTitle title="Create order" subtitle="Describe your ремонт / монтаж task" />
+      <SectionTitle title="Создание заказа" subtitle="Опишите задачу по ремонту / монтажу" />
       <form className="space-y-4" onSubmit={handleSubmit}>
         <select name="serviceType" className="w-full rounded border p-2" value={form.serviceType} onChange={onChange}>
-          <option>Windows</option>
-          <option>Balconies</option>
-          <option>Ceilings</option>
-          <option>Lighting</option>
+          <option>Окна</option>
+          <option>Балконы</option>
+          <option>Потолки</option>
+          <option>Освещение</option>
         </select>
         <textarea
           name="description"
           required
           className="w-full rounded border p-2"
-          placeholder="Task description"
+          placeholder="Описание задачи"
           rows={4}
           value={form.description}
           onChange={onChange}
@@ -40,7 +40,7 @@ function CreateOrderPage() {
           name="address"
           required
           className="w-full rounded border p-2"
-          placeholder="Address"
+          placeholder="Адрес"
           value={form.address}
           onChange={onChange}
         />
@@ -48,11 +48,11 @@ function CreateOrderPage() {
           name="budget"
           required
           className="w-full rounded border p-2"
-          placeholder="Budget (₸)"
+          placeholder="Бюджет (₸)"
           value={form.budget}
           onChange={onChange}
         />
-        <button className="w-full rounded-lg bg-brand px-4 py-3 font-medium text-white">Submit order</button>
+        <button className="w-full rounded-lg bg-brand px-4 py-3 font-medium text-white">Отправить заказ</button>
       </form>
     </section>
   );

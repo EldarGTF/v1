@@ -11,17 +11,17 @@ function Navbar() {
           Build Service
         </Link>
         <nav className="flex items-center gap-4 text-sm">
-          <Link to="/create-order">Create Order</Link>
-          <Link to="/orders">Orders</Link>
-          <Link to="/dashboard/client">Client Dashboard</Link>
-          <Link to="/dashboard/installer">Installer Dashboard</Link>
+          <Link to="/create-order">Создать заказ</Link>
+          <Link to="/orders">Заказы</Link>
+          <Link to="/dashboard/client">Кабинет клиента</Link>
+          <Link to="/dashboard/installer">Кабинет мастера</Link>
           <select
             className="rounded border px-2 py-1"
             value={user.role}
             onChange={(e) => switchRole(e.target.value)}
           >
-            <option value="client">Client</option>
-            <option value="installer">Installer</option>
+            <option value="client">Клиент</option>
+            <option value="installer">Мастер</option>
           </select>
         </nav>
       </div>
